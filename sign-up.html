@@ -63,12 +63,12 @@
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
 
   <script>
-    const signupForm = document.querySelector('#signup-form');
+    const signupForm = document.querySelector('#signup');
     signupForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const email = document.querySelector('#email').value;
-      const password = document.querySelector('#password').value;
-      const fname = document.querySelector('#Name').value;
+      const email = document.querySelector('#wf-sign-up-email').value;
+      const password = document.querySelector('#wf-sign-up-password').value;
+      const fname = document.querySelector('#wf-sign-up-name').value;
   
       try {
         const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
